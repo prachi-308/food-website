@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
     background:url(assets/bg.png)
 }
 header {
@@ -141,7 +141,7 @@ header {
 @media screen and (max-width: 650px) {
     .container {
         height: 600px;
-        width: 300px;
+        width:100%;
     }
  
     .title {
@@ -200,7 +200,7 @@ header {
 @media screen and (max-width: 320px) {
     .container {
         height: 600px;
-        width: 250px;
+        width: 100%;
     }
  
     .heading {
@@ -259,3 +259,5 @@ header {
         font-size: 19px;
     }
 }
+
+
