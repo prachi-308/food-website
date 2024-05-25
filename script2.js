@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var buttons = document.getElementsByClassName("menu_btn");
     let sum = 0;
