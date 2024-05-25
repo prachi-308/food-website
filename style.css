@@ -26,11 +26,12 @@ ul{
 .w-100{
     width:100%;
 }
+
 #icon i{
     color:black;
-    z-index:10001;
     cursor: pointer;
-    display: none;
+    position: relative;
+    
 
 
 }
@@ -116,6 +117,7 @@ header{
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
+    margin-right: 10px;
 }
 .sign li button{
     border-radius:20px;
@@ -577,17 +579,16 @@ header{
 
 } */
 .cart{
-    font-size: 70px;
-    border: transparent;
-    background-color: transparent;
+    font-size: 3rem;
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    background-color: #18902a;
+    
     padding: 10px;
-    color: white;
-    border:transparent;
+    color: rgb(0, 0, 0);
+    background-color: white;
 
 }
 .cart-button{
@@ -1170,14 +1171,88 @@ footer{
     color:#656565;
 }
 /* resposive  */
+@media (min-width:945px) {
+    #icon i{
+        display: none;
+    }
+    
+}
 @media(max-width:945px)
 {
     header{
         padding: 20px 3%;
         transition:.3s;
     }
+    #icon i {
+        display: block;
+        color: #000000;
+        margin-right: 10px;
+  
+      }
     
 }
+@media (max-width: 768px) {
+    header ul.nav-items {
+      display: none;
+    }
+  
+    header ul.sign {
+      display: flex;
+    }
+  
+   
+    #login{
+        font-size: 10px;
+       
+    }
+    body{
+        overflow-x: hidden;
+    }
+  
+    /* Show cart button */
+    .cart-button {
+      display: block;
+     
+    }
+    .cart-button span{
+        font-size: 1rem;
+        padding: 0.3px;
+        border-radius: 6px;
+    }
+  
+    /* Styling for the responsive navigation */
+    .responsive-nav {
+      display: block;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      z-index: 999;
+    }
+  
+    .responsive-nav ul {
+      display: block;
+    }
+  
+    .responsive-nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  /* Media query for screens smaller than 480px */
+  @media (max-width: 480px) {
+    header .logo {
+      font-size: 1.2em;
+    }
+  
+    .main-btn .btn1, .main-btn .btn2 {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
+  
 @media(max-width:1140px)
 {
     .home{
@@ -1273,4 +1348,35 @@ footer{
         visibility: visible;
     }
 }
+/* .navigation-menu {
+    display: none;
+    /* Other styling properties */
+ */
 
+.navigation-menu {
+   
+    
+}
+#menu-items{
+    background-color: rgb(255, 246, 228);
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    position: fixed;
+    top: 13%;
+    right:30%;
+    padding: 20px;
+    display: none;
+ } 
+#menu-items li{
+    margin-bottom: 10px;
+}
+#menu-items a{
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
