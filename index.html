@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+        #cart-box{
+    display:none;
+    position:absolute;
+     top:100px;
+     width:100%;
+      z-index:100000000000;
+}
+    </style>
     
     <title>Document</title>
 </head>
@@ -52,7 +61,7 @@
             <li><a href="login.html" target="_blank" id="login" >login</a></li>
             
             <button type="button" class="cart-button" onclick="toggleCart()">
-                <a href="#cart-box"  class="cart">
+                <a href="#cartbox" class="cart">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     
                 </a>
@@ -160,6 +169,18 @@
     
                 </div>
                 
+            </div>
+            <div class="cartbox" id="cart-box">
+                <h2 id="carthead">Cart</h2>
+                <div class="cartItems">
+                    <p class="empty-cart-msg" id="empty-cart-msg">YOUR CART IS EMPTY</p>
+                    <ul id="cart-items"></ul>
+                </div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <div id="total-amount"></div>
+                </div>
+             
             </div>
     
         </section>
@@ -413,18 +434,8 @@
                 </div>
                 
             </div>
-            <div class="cartbox" id="cart-box">
-                <h2 id="carthead">Cart</h2>
-                <div class="cartItems">
-                    <p class="empty-cart-msg" id="empty-cart-msg">YOUR CART IS EMPTY</p>
-                    <ul id="cart-items"></ul>
-                </div>
-                <div class="foot">
-                    <h3>Total</h3>
-                    <div id="total-amount"></div>
-                </div>
-            </div>
-            
+   
+ 
             
             
             
